@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Quer namorar comigo?</title>
+  <style>
+    body {
+      background: #ffe6f0;
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #ff3366;
+    }
+
+    .buttons {
+      margin-top: 50px;
+    }
+
+    button {
+      font-size: 1.5em;
+      padding: 15px 30px;
+      margin: 20px;
+      cursor: pointer;
+      border: none;
+      border-radius: 10px;
+      transition: 0.3s ease;
+    }
+
+    #yesBtn {
+      background-color: #66ff66;
+    }
+
+    #noBtn {
+      background-color: #ff6666;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <h1>Quer namorar comigo? 💖</h1>
+  <div class="buttons">
+    <button id="yesBtn">Sim</button>
+    <button id="noBtn">Não</button>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById('noBtn');
+    const yesBtn = document.getElementById('yesBtn');
+
+    yesBtn.onclick = () => {
+      window.location.href = 'https://www.youtube.com/watch?v=Gwtt6yklGac'; // Novo vídeo
+    }
+
+    noBtn.onmouseover = () => {
+      const i = Math.floor(Math.random() * (window.innerHeight - 50));
+      const j = Math.floor(Math.random() * (window.innerWidth - 100));
+      noBtn.style.top = `${i}px`;
+      noBtn.style.left = `${j}px`;
+    }
+  </script>
+</body>
+</html>
